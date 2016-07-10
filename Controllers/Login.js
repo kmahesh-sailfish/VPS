@@ -52,6 +52,7 @@
             {
                 $scope.email="";
                 $scope.password="";
+                $scope.message="";
             }
 
 
@@ -66,9 +67,9 @@
             }
 
             function onLoginFailed() {
-
+                $scope.message="Login Faild"
                 console.log('faild');
             }
-
+            $scope.message="";
         })
 }());
