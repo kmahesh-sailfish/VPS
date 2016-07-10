@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Management</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
+
+</head>
+<body ng-app="app">
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2> User Management App</h2>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <nav class="navbar navbar-default nav-tabs-justified">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Dashboard</a>
+                    </div>
+                   <!-- <div class="navbar-header">
+                        <a class="navbar-brand" ui-sref="Register">Register</a>
+                    </div>-->
+                    <div class="navbar-header">
+                        <a class="navbar-brand" ui-sref="Login">Login</a>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div ui-view="menu" style="width: 50px;font-size: 25px"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div ui-view="template"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+
+<!--Auth0 Login-->
+<script src="js/auth0-angular-4.js"></script>
+<script src="js/auth0-6.7.js"></script>
+<script src="js/ui-grid.js"></script>
+<script src="js/jquery-1.12.2.min.js"></script>
+
+<script src="js/angular-storage.js"></script>
+<script src="Controllers/Login.js"></script>
+
+<script src="Controllers/UserList.js"></script>
+
+<script src="Controllers/LogOut.js"></script>
+<script src="Controllers/HeaderC.js"></script>
+<script src="Services/crudFactory.js"></script>
+<!--Angular Stroage-->
+<script src="Services/LoginDetail.js"></script>
+<script src="Services/common.services.js"></script>
+<script src="Services/restResource.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

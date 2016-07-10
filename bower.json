@@ -1,0 +1,25 @@
+{
+  "name": "VPSAPP",
+  "authors": [
+    "mahesh.kaigitaha <maheshvrsecit@gmail.com>"
+  ],
+  "description": "UserManagement",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "angularjs#^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6",
+    "angular-jwt": "^0.0.9",
+    "angular-ui-grid": "ng-grid#^3.2.1",
+    "angular-resource": "^1.5.7"
+  }
+}

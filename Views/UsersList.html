@@ -1,0 +1,152 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>User List</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+        <div class="col-md-3">
+            Name:
+        </div>
+        <div class="col-md-3">
+            <input type="text" ng-model="user.Name" >
+        </div>
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+        <div class="col-md-3">
+            Lastname:
+        </div>
+        <div class="col-md-3">
+            <input type="text" ng-model="user.Lastname" >
+        </div>
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+        <div class="col-md-3">
+            Address:
+        </div>
+        <div class="col-md-3">
+            <input type="text" ng-model="user.Address" >
+        </div>
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+        <div class="col-md-3">
+            Email:
+        </div>
+        <div class="col-md-3">
+            <input type="text" ng-model="user.Email" >
+        </div>
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+        <div class="col-md-6">
+            <input type="submit" ng-click="Creatuser(user)">
+            <input type="submit" id="update" value="Update" ng-click="updateuser(user)">
+        </div>
+
+        <div class="col-md-3">
+            &nbsp;
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            &nbsp;
+        </div>
+    </div>
+   <div class="row">
+       <div class="col-md-12">
+           &nbsp;
+       </div>
+   </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                </tr>
+                </thead>
+                <tr ng-repeat="user in Users">
+                    <!-- <td ng-hide="true">
+                         {{user.idUsers}}</td>-->
+                    <td>
+                        {{user.userName}}</td>
+                    <td>
+                        {{user.userLastname}}
+                    </td>
+                    <td>
+                        {{user.useraddress}}
+                    </td>
+                    <td>
+                        {{user.useremail}}
+                    </td>
+                    <td>
+                        &nbsp;
+                    </td>
+                    <td>
+                        <input type="submit" id="Edit" value="Edit" ng-click="edit(user)"/>
+                    </td>
+                    <td>
+                        <input type="submit" id="Delete" value="Delete" ng-click="deleteuser(user)"/>
+                    </td>
+
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
