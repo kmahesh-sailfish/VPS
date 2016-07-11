@@ -1,6 +1,4 @@
-/**
- * Created by karthik on 01-14-2016.
- */
+
 (function() {
     "use strict";
 

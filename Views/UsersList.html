@@ -122,9 +122,43 @@
             &nbsp;
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="border-style: solid">
         <div class="col-lg-12">
-            <table class="table">
+            <div ng-repeat="user in Users ">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div id="undiv" ng-bind="user.userName"></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div id="uldiv" ng-bind="user.userLastname"></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div id="uadiv" ng-bind="user.useraddress">
+
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div id="uediv" ng-bind="user.useremail"></div>
+                    </div>
+                    <div class="col-md-2">
+                        <div id="subdiv">
+                            <input type="submit" id="Edit" value="Edit"class="btn btn-warning" ng-click="edit(user)"/>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2">
+                        <div id="dediv">
+                            <input type="submit" id="Delete" value="Delete" class="btn btn-danger" ng-click="deleteuser(user)"/>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+           <!-- <table class="table">
                 <thead>
                 <tr>
                     <th>First Name</th>
@@ -133,9 +167,12 @@
                     <th>Email</th>
                 </tr>
                 </thead>
+                <div ng-repeat="user in Users ">
+                    <div ng-bind="user.userName"></div>
+                </div>
                 <tr ng-repeat="user in Users">
-                    <!-- <td ng-hide="true">
-                         {{user.idUsers}}</td>-->
+                    &lt;!&ndash; <td ng-hide="true">
+                         {{user.idUsers}}</td>&ndash;&gt;
                     <td>
                         {{user.userName}}</td>
                     <td>
@@ -159,7 +196,7 @@
 
 
                 </tr>
-            </table>
+            </table>-->
         </div>
     </div>
 

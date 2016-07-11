@@ -17,14 +17,10 @@
                                 templateUrl: 'Views/Login.html',
                                 controller: 'LoginCtrl',
                             },
-                           /* 'menu': {
-                             templateUrl: 'Views/header.html',
-                             controller: 'HeaderCtrl'
-                             }*/
+
 
                         }
-                       /* templateUrl: 'Views/Login.html',
-                        controller: 'LoginCtrl'*/
+
                     })
 
             }]).
@@ -58,17 +54,17 @@
 
             function onLoginSuccess(profile,token) {
 
-                console.log("success");
-
                 store.set('profile', profile);
                 store.set('token', token);
 
                 $state.go('UserList');
+
+
             }
 
             function onLoginFailed() {
                 $scope.message="Login Faild"
-                console.log('faild');
+
             }
             $scope.message="";
         })

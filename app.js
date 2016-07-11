@@ -19,11 +19,6 @@
                      templateUrl:'Index.html',
 
                 })
-                    /*.state('userlist',{
-                        url:'/Userlist',
-                        templateUrl:'Views/UsersList.html',
-                        controller:'UsersListCtrl'
-                    })*/
                 authProvider.init({
                     domain: 'mahesh12.auth0.com',
                     clientID: 'tT8knUJcg3m2amqT0FEaHBkbjFKCEOEI',

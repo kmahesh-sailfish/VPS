@@ -15,18 +15,21 @@
 
                                 templateUrl: 'Views/UsersList.html',
                                 controller: 'UserListCtrl',
+                                data: { requiresLogin: true },
+                                authenticate: true
                             },
                             'menu': {
                                 templateUrl: 'Views/header.html',
-                                controller: 'HeaderCtrl'
+                                controller: 'HeaderCtrl',
+                                data: { requiresLogin: true },
+                                authenticate: true
                             },
                             params: {
-                                 ADBID:null
+                                ADBID:null
                             }
 
                         }
-                        /*templateUrl: 'Views/UsersList.html',
-                        controller: 'UserListCtrl'*/
+
                     })
 
             }]).
@@ -39,7 +42,7 @@
                 $scope.edit=function(getuser){
 
                     var resource=Resource.GetRestUrl(appSettings.accountsSingleUrl);
-                   resource.query(
+                    resource.query(
                         {idUsers: getuser.idUsers},
 
                         function(data) {
@@ -98,7 +101,7 @@
                 $scope.Creatuser=function(getuser)
                 {
                     var resource=Resource.GetRestUrl(appSettings.accountCreationUrl);
-                  var  user={};
+                    var  user={};
 
 
                     $scope.user.password='$2a$10$NsN3y42Ar.9ftYVR0JzBMuBx09aozNOkepAYeyptp.2ahL9wN9mbO';
@@ -116,9 +119,10 @@
                             clear();
                         },
                         function (error) {
-                           console.log(error);
+                            console.log(error);
                         });
                 }
+
             }
             else {
 
@@ -144,15 +148,15 @@
                     });
             }
 
-          function clear()
-          {
-              var user={};
-              $scope.user.Name="";
-              $scope.user.Lastname="";
-              $scope.user.Address="";
-              $scope.user.Email="";
-              $scope.user.passwor="";
-          }
+            function clear()
+            {
+                var user={};
+                $scope.user.Name="";
+                $scope.user.Lastname="";
+                $scope.user.Address="";
+                $scope.user.Email="";
+                $scope.user.passwor="";
+            }
 
         });
 }());
