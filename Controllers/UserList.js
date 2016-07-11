@@ -16,7 +16,8 @@
                                 templateUrl: 'Views/UsersList.html',
                                 controller: 'UserListCtrl',
                                 data: { requiresLogin: true },
-                                authenticate: true
+                                authenticate: true,
+
                             },
                             'menu': {
                                 templateUrl: 'Views/header.html',
@@ -37,6 +38,7 @@
 
 
             if (auth.isAuthenticated) {
+
                 var ADBID = null;
                 LoadUsers();
                 $scope.edit=function(getuser){
